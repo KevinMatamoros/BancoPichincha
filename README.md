@@ -10,9 +10,11 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 Run `npm run test` to execute the unit tests.
 
-<img width="875" alt="image" src="https://github.com/KevinMatamoros/BancoPichincha/assets/26463322/34d829fd-611e-4639-860b-c60d24029603">
-
 
 ## Link Demo
 https://65cc66c14e60eb71c3a090ba--banco-pichincha.netlify.app/
+
+
+## Link Test Report
+https://main--banco-pichincha-test-coverage.netlify.app/
 
