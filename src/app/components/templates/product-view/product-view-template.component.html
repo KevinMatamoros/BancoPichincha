@@ -1,0 +1,19 @@
+<form [formGroup]="formView" *ngIf="products">
+  <div class="title-actions">
+    <InputText formControlName="search" placeholder="Busqueda por nombre" />
+    <ButtonField text="Agregar" color="#F9DE4C" (triggerAction)="addProductRedirect()" />
+  </div>
+  <div class="table-container">
+    <app-table
+      [tableHeaders]="tableHeaders"
+      [searchElement]="searchElement"
+      [tableContent]="products"
+      [pagination]="pagination"
+      (triggerSelected)="rowSelection($event)"
+    ></app-table>
+    <Paginator [rowNumber]="products.length" (paginationTrigger)="selectedPage($event)" />
+  </div>
+</form>
+
+
+<div #modal></div> 

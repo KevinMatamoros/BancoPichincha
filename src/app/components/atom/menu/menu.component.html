@@ -1,0 +1,7 @@
+<div class="container">
+  <div (click)="showMenu = !showMenu">&#65049;</div>
+  <div *ngIf="showMenu" class="dropdown-content">
+    <a (click)="selectAction(actionsMenu.EDIT)">Editar</a>
+    <a (click)="selectAction(actionsMenu.DELETE)">Eliminar</a>
+  </div>
+</div>

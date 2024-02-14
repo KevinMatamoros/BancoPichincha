@@ -1,0 +1,24 @@
+<table [id]="id">
+  <caption>
+    {{tableDescription}}
+  </caption>
+  <thead>
+    <tr>
+      <th *ngFor="let header of tableHeaders" [id]="header">
+        <Typography [text]="header.label" [size]="sizeTypography.heading_4" />
+      </th>
+    </tr>
+  </thead>
+  <tbody *ngIf="tableContent?.length">
+    <tr *ngFor="let row of tableContent | filterBy: 1 : searchElement | slice: 0 : pagination; let i = index" [attr.data-index]="i">
+      <td *ngFor="let column of tableHeaders; let j = index">
+        <ng-container [ngSwitch]="column.value">
+          <Image *ngSwitchCase="tableHeaderValues.LOGO" [src]="row[j]"  />
+          <Typography *ngSwitchCase="tableHeaderValues.DATE" [text]="row[j] | date:'d/M/yyyy'" [size]="sizeTypography.paragraph" />
+          <Typography *ngSwitchDefault [text]="row[j]" [size]="sizeTypography.paragraph" />
+        </ng-container>
+      </td>
+      <td><MenuDot (optionSelected)="triggerSelection($event, row)" /></td>
+    </tr>
+  </tbody>
+</table>

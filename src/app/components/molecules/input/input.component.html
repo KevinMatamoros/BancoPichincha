@@ -1,0 +1,30 @@
+<div class="input-container">
+  <Typography
+    class="legend"
+    *ngIf="legendText"
+    [text]="legendText"
+    [size]="sizeLegend"
+  />
+  <input
+    #input
+    required
+    [type]="type"
+    [class.input-error]="errorMessage && isTouched"
+    [id]="id"
+    [min]="min"
+    [minlength]="minLength"
+    [maxlength]="maxLength"
+    [placeholder]="placeholder"
+    (blur)="blurInput($event)"
+    [disabled]="isDisabled"
+    [(ngModel)]="value"
+    (ngModelChange)="handleChange($event)"
+  />
+  <div *ngIf="errorMessage && isTouched">
+    <Typography
+      class="error-message"
+      [text]="errorMessage"
+      [size]="size.heading_5"
+    />
+  </div>
+</div>

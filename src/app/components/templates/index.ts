@@ -1,0 +1,1 @@
+export { ProductViewTemplateComponent } from './product-view/product-view-template.component';

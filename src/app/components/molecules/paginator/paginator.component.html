@@ -1,0 +1,14 @@
+<div class="container space-top-20">
+  <div class="results">
+    <Typography [text]="textResult" [size]="size.heading_4" />
+  </div>
+  <div>
+    <select (change)="selectPagination($event)">
+      <option *ngFor="let page of pagination" [value]="page.value">
+        {{ page.label }}
+      </option>
+    </select>
+  </div>
+</div>
+
+<!-- (change)="selectPagination($event.target.value)" -->

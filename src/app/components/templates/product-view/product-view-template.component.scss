@@ -1,0 +1,13 @@
+.title-actions{
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-container {
+  position: relative;
+  margin-top: 6px;
+  padding: 20px;
+  background-color: white;
+  max-height: 400px;
+  overflow: scroll;
+}

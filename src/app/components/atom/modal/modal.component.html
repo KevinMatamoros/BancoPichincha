@@ -1,0 +1,19 @@
+<div class="modal-overlay">
+  <section class="modal">
+    <div class="content">{{ body }}</div>
+    <footer>
+      <ButtonField
+        class="space-right-20"
+        text="Cancelar"
+        color="#E9ECF3"
+        (triggerAction)="cancel()"
+      />
+      <ButtonField
+        class="space-left-20"
+        text="Confirmar"
+        color="#F9DE4C"
+        (triggerAction)="confirm()"
+      />
+    </footer>
+  </section>
+</div>

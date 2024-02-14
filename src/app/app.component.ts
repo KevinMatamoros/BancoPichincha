@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Size } from './components/atom/typography/utils';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'banco_pichincha';
+  title = 'BANCO PICHINCHA';
+  size = Size;
 }

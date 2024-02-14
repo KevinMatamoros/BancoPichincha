@@ -1,4 +1,4 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
+// To learn more about this file see: https://angular.io/config/tsconfig.
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -22,7 +22,17 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@atoms": ["src/app/components/atom/index.ts"],
+      "@molecules": ["src/app/components/molecules/index.ts"],
+      "@organism": ["src/app/components/organism/index.ts"],
+      "@pages": ["src/app/components/pages/index.ts"],
+      "@templates": ["src/app/components/templates/index.ts"],
+      "@shared/models": ["src/app/shared/models/index.ts"],
+      "@shared/services": ["src/app/shared/services/index.ts"],
+      "@shared/pipes": ["src/app/shared/pipe/index.ts"]
+    }    
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

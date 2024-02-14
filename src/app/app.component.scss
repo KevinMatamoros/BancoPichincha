@@ -1,0 +1,13 @@
+header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    .title {
+        width: 100px;
+    }
+}
+.content {
+    padding-top: 80px;
+    background-color: #f4f6f9;
+    height: 80vh;
+}

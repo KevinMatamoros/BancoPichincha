@@ -1,0 +1,16 @@
+<div class="container">
+    <Typography text="Formulario de Registro" [size]="size.heading_1" />
+    <hr>
+    <form [formGroup]="form">
+        <InputText class="input" formControlName="id" legendText="ID" (blurTrigger)="validateId()" [minLength]="3" [maxLength]="10" />
+        <InputText class="input" formControlName="name" legendText="Nombre" [minLength]="5" [maxLength]="100" />
+        <InputText class="input" formControlName="description" legendText="Descripcion" [minLength]="10" [maxLength]="200" />
+        <InputText class="input" formControlName="logo" legendText="Logo" />
+        <InputText class="input" formControlName="date_release" legendText="Fecha Liberacion" type="date" [min]="min" />
+        <InputText class="input" formControlName="date_revision" legendText="Fecha Revision" type="date" />
+    </form>
+    <div>
+        <ButtonField class="space-right-20" text="Reiniciar" color="#E9ECF3" (triggerAction)="resetForm()" />
+        <ButtonField class="space-left-20" [disabled]="!form.valid" text="Enviar" color="#F9DE4C" (triggerAction)="saveProduct()" />
+    </div>
+</div>

@@ -1,0 +1,34 @@
+.font-style {
+  font-size: 14px;
+  color: slategray;
+}
+
+input {
+  @extend .font-style;
+  height: 22px;
+  min-width: 220px;
+  padding: 5px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+::placeholder {
+  @extend .font-style;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  .legend {
+    margin-bottom: 5px;
+  }
+}
+
+.input-error {
+  border: 1px solid red;
+}
+
+.error-message {
+  color: red;
+}

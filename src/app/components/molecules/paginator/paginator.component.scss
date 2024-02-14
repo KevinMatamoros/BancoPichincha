@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    .results {
+        padding-top: 5px;
+    }
+}
+
+select {
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #80808078;
+}
