@@ -14,7 +14,11 @@ export class ProductEditPageComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     const productStorage = localStorage.getItem('financeProduct');
-    if (productStorage) this.productFinance = FinanceProduct.adapt(JSON.parse(productStorage));
+    if (productStorage && productStorage !== 'undefined') this.productFinance = FinanceProduct.adapt(
+      JSON.parse(
+        productStorage
+        )
+      );
   }
 
   ngOnDestroy(): void {
